@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "goit-python-web-hw-07"
+version = "0.1.0"
+description =  "GoIT, Python WEB, Homework number 07. SQL. ORM. SQLAlchemy. Alembic."
+authors = ["lexxai <lexxai@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+  packages = [
+     { include = "*", from = "src" },
+  ]
+
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = "^2.0.21"
+alembic = "^1.12.0"
+psycopg2 = "^2.9.8"
+faker = "^19.6.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
