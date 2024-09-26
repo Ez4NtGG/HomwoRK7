@@ -24,7 +24,6 @@ def get_query_dict(query, id = None):
 
 
 def action_create(kwargs):
-    # print(kwargs)
     id = kwargs.get("id")
     group_id = kwargs.get("group_id")
     teacher_id = kwargs.get("tid")

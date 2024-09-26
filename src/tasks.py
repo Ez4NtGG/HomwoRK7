@@ -361,13 +361,6 @@ def task_12(*args, **kwargs):
 
 
 if __name__ == "__main__":
-    # print(globals())
-    # print(dir())
-    # tasks = get_tasks(dir())
-    # [task() for task in tasks]
-    # func = getattr(globals, tasks[0])
-    # func = globals().get(tasks[0])
-    # func()
     for task in get_tasks():
         print("-" * 80)
         print(task.__name__)

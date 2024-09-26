@@ -22,5 +22,4 @@ def app_arg():
     ap.add_argument("--limit", help="limit of results", type=int)
 
     args = vars(ap.parse_args())
-    # print(f"{args=}")
     return args

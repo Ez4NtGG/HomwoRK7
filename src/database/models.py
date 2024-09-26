@@ -66,7 +66,6 @@ class Student(Base):
     group_id = Column(
         Integer, ForeignKey("groups.id", ondelete="SET NULL"), nullable=True
     )
-    # groups = relationship('Groups', backref="group")
 
     group = relationship("Group", back_populates="students")
     grade = relationship("Grade", back_populates="student")
@@ -106,7 +105,6 @@ class Discipline(Base):
     teacher_id = Column(
         Integer, ForeignKey("teachers.id", ondelete="SET NULL"), nullable=True
     )
-    # teachers = relationship('Teachers')
 
     teacher = relationship("Teacher", back_populates="disciplines")
     grades = relationship("Grade", back_populates="discipline")

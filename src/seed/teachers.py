@@ -36,8 +36,6 @@ def erase_teachers_by_one():
 
 def create_teachers(total: int = TOTAL_TEACHERS):
     erase_teachers()
-    # erase_teachers_by_one()
-    # drop_teachers()
     fake: Faker = Faker("uk-UA")
     for _ in range(total):
         teacher = Teacher(

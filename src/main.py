@@ -10,15 +10,11 @@ package_name="hw"
 logger = logging.getLogger(package_name)
 
 if __name__ == "__main__":
-    # logging.basicConfig()
-    # logger.setLevel(logging.INFO)
     args = app_arg()
-    # create_data()
 
     if args.get("action"):
         task_result = do_commnds(args)
         if task_result:
-            # print(command_result)
             column_names = task_result.get("column_names")
             for id, row in enumerate(task_result.get("result")):
                 row_str = []
@@ -28,7 +24,6 @@ if __name__ == "__main__":
                 print(f"[{id+1:2}] {result}")
 
     else:
-        # do tasks  
         for task in tasks.get_tasks():
             print("-" * 80)
             print(task.__name__)
